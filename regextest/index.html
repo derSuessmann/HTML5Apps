@@ -8,33 +8,16 @@
 <body>
 	<h1>Testprogramm für reguläre Ausdrücke in JavaScript</h1>
 	<form action="">
-		<h2>Regulärer Ausdruck</h2>
-		<input type="text" id="regExpPattern"> 
-		<input type="text" id="text"> 
-		<!-- insert a button. type="button" is mandatory. Otherwise page will 
+		<label for="regExpPattern">Regulärer Ausdruck</label>
+		<input type="text" id="regExpPattern">
+		<label for="text">Text</label>
+		<input type="text" id="text">
+		<!-- insert a button. type="button" is mandatory. Otherwise page will
 		reload after calling event handler -->
-		<button type="button" id="testRegExp">Teste</button> 
+		<button type="button" id="testRegExp">Teste</button>
 	</form>
-	
-	
-	<script>
-	"use strict";
 
-	  var testRegExpBtn = document.getElementById('testRegExp');
-	
-	  function testRegExp(event) {
-	  	var reText = document.getElementById("regExpPattern").value;
-		  var textText = document.getElementById("text").value;
-		
-		  if (reText) {
-		  	var re = new RegExp(reText, "g");
-		  	var result = re.exec(textText);
-		  	alert(result);
-	  	}
-	  }
-	
-	  testRegExpBtn.addEventListener("click", testRegExp);
-  	</script>
-	
+	<script src="app.js">
+	</script>
 </body>
 </html>
